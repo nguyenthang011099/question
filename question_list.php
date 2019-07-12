@@ -9,8 +9,8 @@ class QuestionList
         while (!feof($file)) {
             $question = new Question(); //khoi tao doi tuong question of class Question
             $result = fgets($file);
-            $result = str_replace('######', "cau ", $result);
-            $result = str_replace('####', "", $result);
+            $result = str_replace('######', "cau ", $result);// edit 
+            $result = str_replace('####', "", $result);// edit 
             if (!preg_match("/<details>/", $result)) {
                 $question->questionContent .= $result;
                     //echo $result; //test print question result
