@@ -30,4 +30,13 @@ class QuestionList
         fclose($file);
     }
 
+     public function convert(){
+        $result="";
+        foreach ($this->questionList as $question){
+                $result .=$question;
+               // $result .=" \n ==========\n";
+
+        }
+        return $result;
+    }
 }
